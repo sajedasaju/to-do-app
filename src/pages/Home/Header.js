@@ -19,9 +19,9 @@ const Header = () => {
                 <div className="container mx-auto px-4 flex  justify-between flex-wrap items-center ">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <span
-                            className="flex items-center"
+                            className="flex items-center text-2xl font-serif font-bold text-[#a46103] "
                         >
-                            ToDo App
+                            Todo App
 
                         </span>
                         <button

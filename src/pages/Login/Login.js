@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from './../../firebase.init';
 
 const Login = () => {
     const navigate = useNavigate();
-    // const location = useLocation();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
     const navigateRegister = () => {
         navigate('/register')
     }
@@ -32,10 +34,11 @@ const Login = () => {
     const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
 
 
+
     if (user) {
-        // navigate(from, { replace: true });
-        navigate('/')
+        navigate(from, { replace: true });
     }
+
 
     const handleEmailChange = (event) => {
         const emailRegex = /\S+@\S+\.\S+/;
