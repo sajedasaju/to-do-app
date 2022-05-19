@@ -8,7 +8,7 @@ const EditTask = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        const url = `http://localhost:5000/task/${taskId}`;
+        const url = `https://young-chamber-03759.herokuapp.com/task/${taskId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setTask(data))
@@ -23,7 +23,7 @@ const EditTask = () => {
         const updatedUser = { name, description };
 
         // send data to the server
-        const url = `http://localhost:5000/task/${taskId}`
+        const url = `https://young-chamber-03759.herokuapp.com/task/${taskId}`
         fetch(url, {
             method: 'put',
             headers: {

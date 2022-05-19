@@ -13,7 +13,7 @@ const ToDo = () => {
     // console.log(isLoading)
     useEffect(() => {
         // setIsLoading(true);
-        fetch('http://localhost:5000/task')
+        fetch('https://young-chamber-03759.herokuapp.com/task')
             .then((response) => response.json())
             .then((data) => {
 

@@ -6,7 +6,7 @@ const AddTask = () => {
     const [strike, setStrike] = useState(false)
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = (data, e) => {
-        const url = 'http://localhost:5000/task';
+        const url = 'https://young-chamber-03759.herokuapp.com/task';
         fetch(url, {
             method: 'POST',
             headers: {

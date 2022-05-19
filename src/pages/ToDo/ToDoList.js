@@ -12,7 +12,7 @@ const ToDoList = ({ task, index }) => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Want to Delete?")
         if (proceed) {
-            fetch(`http://localhost:5000/task/${id}`,
+            fetch(`https://young-chamber-03759.herokuapp.com/task/${id}`,
                 {
                     method: "DELETE",
                 })
