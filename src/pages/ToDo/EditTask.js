@@ -44,7 +44,9 @@ const EditTask = () => {
     return (
         <div class="card lg:max-w-lg bg-base-100 shadow-xl mx-auto mt-12">
             <div class="card-body p-0 py-10">
-                <h2 className='text-2xl font-bold text-center'>Update Your Task</h2>
+                <div className="flex flex-col w-full border-opacity-50 justify-center items-center justify-items-center">
+                    <h2 className='text-yellow-500  text-3xl font-bold text-center mb-10'>Update Task</h2>
+                </div>
                 <form onSubmit={handleUpdateUser}>
                     <div class="editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl">
                         <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder={task.name} type="text" name='name' required />
@@ -53,7 +55,7 @@ const EditTask = () => {
 
 
 
-                        <div class="buttons flex items-center justify-items-center justify-center">
+                        <div class="buttons flex items-center justify-items-center justify-center mt-3">
                             <div class="btn border border-gray-300  px-4 font-semibold cursor-pointer text-gray-500 py-0">Cancel</div>
                             <button type='submit' class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500">Update</button>
                         </div>

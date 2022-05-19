@@ -1,28 +1,32 @@
 import React from 'react';
 import Header from './Header';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
 
+        <div style={{
+            background: 'url(https://images.unsplash.com/photo-1520004434532-668416a08753?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470)',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover'
+        }} className="w-full h-screen bg-center bg-no-repeat bg-cover"
+        >
 
-        <div className='w-full mx-auto'>
-            <div class='flex '>
-                <div class='w-1/2 p-10 bg-gradient-to-r from-yellow-100'>
-                    <h1 class="mb-16 text-2xl">WBSTNM</h1>
-                    <p class='mb-5 text-5xl uppercase tracking-widest'> <span class="text-yellow-400">we're</span> <br /> coming
-                        <br /> soon</p>
-                    <p class="mb-7 text-sm leading-snug text-yellow-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+            <div class="w-full h-screen bg-opacity-50 bg-black flex justify-center items-center">
+                <div class="mx-4 text-center text-white">
+                    <h1 class="font-bold text-6xl mb-4">Welcome to my To-Do App</h1>
                     <div>
-                        <input type="email" class="h-11 rounded-full bg-transparent border-yellow-300 border w-2/4" />
-                        <button class="bg-gradient-to-r from-yellow-300 to-yellow-500 h-11 w-20 rounded-full text-white -m-12"> &#62; </button>
+                        <Link to='/todo' class="bg-blue-500 rounded-md font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-2">
+                            Click here
+                        </Link>
+                        <Link to='/todo' class="bg-red-500 rounded-md font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-red-600 ml-2">
+                            Or click here
+                        </Link>
                     </div>
                 </div>
-                <div class="w-1/2 mr-auto">
-                    <img src="https://images.unsplash.com/photo-1589987607627-616cac5c2c5a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" alt="Waiting Image" />
-                </div>
             </div>
-
-        </div>
+        </div >
     );
 };
 
